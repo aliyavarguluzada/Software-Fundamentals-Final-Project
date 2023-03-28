@@ -7,7 +7,7 @@ function Operation(number) {
     }
     while (exit == false) {
         let number = parseInt(prompt("Enter the operation number"));
-       
+
         if (isNaN(number) == true) {
             alert("Please enter a valid number");
             continue;
@@ -77,41 +77,41 @@ console.log(localStorage.getItem(3));
 
 function Register() {
     let exit = false;
-    while(exit == false){
+    while (exit == false) {
 
-    let name = prompt("Enter your name for Register");
-    if (name == ""){
-        alert("you can't leave name empty");
-        //throw new Error("you can't leave name section empty");
-        continue;
-    }
-    let surname = prompt("Enter your surname for Register");
-    if (surname == ""){
-        alert("you can't leave surname empty");
-        //throw new Error("you can't leave name section empty");
-       continue;
-    }
-    let RegisterEmail = prompt("Enter your email Register");
-    if (RegisterEmail  == ""){
-        alert("you can't leave email empty");
-        //throw new Error("you can't leave name section empty");
-    }
-    let RegisterPassword = prompt("Enter your password for Register");
-    if (RegisterPassword == ""){
-        alert("you can't leave password empty");
-        //throw new Error("you can't leave name section empty");
-        continue;
-    }else{
-        exit = true;
-    }
-    
-    
-    let creds = [name, surname, RegisterEmail, RegisterPassword];
+        let name = prompt("Enter your name for Register");
+        if (name == "") {
+            alert("you can't leave name empty");
+            //throw new Error("you can't leave name section empty");
+            continue;
+        }
+        let surname = prompt("Enter your surname for Register");
+        if (surname == "") {
+            alert("you can't leave surname empty");
+            //throw new Error("you can't leave name section empty");
+            continue;
+        }
+        let RegisterEmail = prompt("Enter your email Register");
+        if (RegisterEmail == "") {
+            alert("you can't leave email empty");
+            //throw new Error("you can't leave name section empty");
+        }
+        let RegisterPassword = prompt("Enter your password for Register");
+        if (RegisterPassword == "") {
+            alert("you can't leave password empty");
+            //throw new Error("you can't leave name section empty");
+            continue;
+        } else {
+            exit = true;
+        }
 
-    console.log(creds);
-    
-    localStorage.setItem(1, creds);
-    
+
+        let creds = [name, surname, RegisterEmail, RegisterPassword];
+
+        console.log(creds);
+
+        localStorage.setItem(1, creds);
+
 
     }
 }
@@ -120,7 +120,7 @@ console.log(localStorage.getItem(1));
 
 
 function UpdateInformation() {
-    
+
     let UpdateName = prompt("change your name");
     let UpdateSurname = prompt("change your surname");
     let UpdateEmail = prompt("change your email");
